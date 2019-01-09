@@ -38,8 +38,7 @@ def register():
         comuna = request.form['comuna']
         education = request.form['study']
         transport = request.form['transportation']
-        userid = 3
-        # userid = db.session.query(func.count(Users.id)).all()[0][0] + 1 ## Falta generar un id aleatorio
+        userid = db.session.query(func.count(Users.id)).all()[0][0] + 1 ## Falta generar un id secreto
         # print(userid)
         # session['username'] = userid
         # session['category'] = 'None'
