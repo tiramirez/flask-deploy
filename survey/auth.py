@@ -41,7 +41,7 @@ def register():
         userid = db.session.query(func.count(Users.id)).all()[0][0] + 1 ## Falta generar un id aleatorio
         print(userid)
         # session['username'] = userid
-        session['category'] = 'None'
+        # session['category'] = 'None'
         
         ## Insrtar la columna en la Base de Datos
         user = Users(gender=gender, age=age, country=country, region=region, comuna=comuna, 

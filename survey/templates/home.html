@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}¿Cual de estos le parece...{% endblock %}</h1>
+  <h3>{% block title %}¿Cual de estos le parece...{% endblock %}</h3>
 {% endblock %}
 
 
 {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <form method="post">
-
-    <h1>{{ category }}</h1>
+    <input type="hidden" name="cookie_category" value="{{ category }}" />
     <select class="sel" name="category" id="sel">
             <option value="1">un mejor lugar <b>para caminar</b>?</option>
             <option value="2">un mejor lugar <b>para vivir?</b></option>
@@ -39,8 +39,9 @@
 </form>
 
 <script>
-  var sel = $('sel')
-  sel[value = 0]
+  var pregunta;
+  pregunta = jQuery("input[name=cookie_category").val();
+  jQuery("select > option[value="+ pregunta +"]").attr('selected','selected')
 </script>
  
 {% endblock %}
