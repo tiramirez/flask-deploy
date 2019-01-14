@@ -4,12 +4,13 @@
   <title>{% block title %}PlacePulse UC{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
-
-  <meta name="apple-mobile-web-app-capable" content="yes" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="mobile-web-app-capable" content="yes">
 </head>
+<script type="text/javascript">
+  if(navigator.userAgent.match(/Android/i)){
+    window.scrollTo(0,1);
+  };
+</script>
+
 <body>
 <div id="container">
   <nav>
