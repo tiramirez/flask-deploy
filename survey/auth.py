@@ -24,7 +24,7 @@ def index():
 
     # # En caso contrario se redirige a la pagina de registro
     # print("No hay cookies")
-    return redirect(url_for('auth.register'))
+    return redirect(url_for('auth.wellcome'))
 
 
 @bp.route('/register', methods=('GET', 'POST'))
@@ -103,6 +103,15 @@ def home():
 @bp.route('/about_us', methods=('GET', 'POST'))
 def about_us():
     return "Hello world"
+
+
+@bp.route('/wellcome', methods=('GET', 'POST'))
+def wellcome():
+    if request.method == 'POST':
+        return redirect(url_for('auth.register'))
+    return render_template('wellcome.html')
+
+
 
 
 ###############################################################################

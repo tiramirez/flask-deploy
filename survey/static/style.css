@@ -8,6 +8,7 @@ body {
 	margin: 0 auto;
 	background: white;
 	border-radius:10px;
+	box-shadow: 2px 2px 10px 2px grey;
 }
 
 header { 
@@ -24,6 +25,24 @@ h1 {
 	font-family: sans-serif ;
 	color: #363534; 
 	margin: 0.3em 0.5em 0.1em 0.5em; 
+}
+h2 { 
+	font-family: sans-serif ;
+	color: #F3F4F5; 
+	margin: 0.3em 0.5em 0.1em 0.5em;
+	text-align: center;
+	font-size: 30pt;
+}
+.instructions p {
+	color: white;
+	font-size: 20pt;
+}
+
+.instructions > .text_instructions{
+	float: right;
+	position: relative;
+	right: 20%; /* or right 50% */
+	text-align: left;
 }
 
 a { color: white; }
@@ -56,6 +75,7 @@ nav ul li a, nav ul li span, header .action {
 
 .content { 
 	padding: 0.1em 0.5em 0.1em 0.5em;
+	position: relative;
 }
 
 .flash { margin: 1em 0; padding: 1em; background: #cae6f6; border: 1px solid #377ba8; }
@@ -123,6 +143,33 @@ select:hover{
 .round:hover{
 	background: #000000;
 }
+
+#back, #next{
+	width: 50px;
+	height: 50px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	position: absolute;
+	top:250px;
+	border-radius:100%;
+	line-height: 50px;
+	border-style: solid;
+
+}
+
+#back:hover, #next:hover{
+	color: #FF6F70;
+	background: #FFF;
+}
+#back{
+	left: 10px;
+}
+
+#next{
+	right: 10px;
+}
+
 
 @media screen and (max-width: 640px){
 	html { 
