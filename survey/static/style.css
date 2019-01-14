@@ -125,7 +125,15 @@ select:hover{
 }
 
 @media screen and (max-width: 640px){
-
+	html { 
+	padding: 0rem;
+	}
+	body { 
+		border-radius:0px;
+	}
+	nav { 
+		border-radius:0px 0px 0px 0px;
+	}
 	#grid{
 	width: 100%;
 	height: 100%;
