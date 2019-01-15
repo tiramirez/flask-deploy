@@ -33,6 +33,12 @@ h2 {
 	text-align: center;
 	font-size: 30pt;
 }
+
+.instructions{
+	max-width: 100%;
+	max-height: 960px;
+}
+
 .instructions p {
 	color: white;
 	font-size: 20pt;
@@ -155,10 +161,23 @@ select:hover{
 	border-radius:100%;
 	line-height: 50px;
 	border-style: solid;
-
+	z-index: 2;
+}
+#register{
+	width: 100px;
+	height: 50px;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	position: absolute;
+	top:250px;
+	border-radius:10px;
+	line-height: 50px;
+	border-style: solid;
+	z-index: 2;
 }
 
-#back:hover, #next:hover{
+#back:hover, #next:hover, #register:hover{
 	color: #FF6F70;
 	background: #FFF;
 }
@@ -170,10 +189,49 @@ select:hover{
 	right: 10px;
 }
 
+#register{
+	right: 10px;
+}
 
-@media screen and (max-width: 640px){
+#text1{
+	position: relative;
+}
+.fullscreen-video-wrap{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.fullscreen-video-wrap video{
+	max-width: 100%;
+}
+
+.text-above-video{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	z-index: 2;
+	text-shadow: 5px 5px 15px #FF6F70;
+}
+.layer-above-video{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background: #FF6F70;
+	opacity: 0.66;
+	z-index: 1;
+}
+
+
+
+@media screen and (max-width: 1080px){
 	html { 
-	padding: 0rem;
+	padding: 0em;
 	}
 	body { 
 		border-radius:0px;
@@ -219,6 +277,66 @@ select:hover{
 
 	#button_right{
 		transform: rotate(90deg);
+	}
+	.fullscreen-video-wrap video{
+	max-height: 100%;
+	max-width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 640px){
+	html { 
+	padding: 0em;
+	}
+	body { 
+		border-radius:0px;
+	}
+	nav { 
+		border-radius:0px 0px 0px 0px;
+	}
+	#grid{
+	width: 100%;
+	height: 100%;
+	}
+	.img_choice{
+		width: 100%;
+		height: 40%;
+		float:left;
+	}
+	#image{
+		height: 100%;
+	}
+	.buttons{
+	height: 30px;
+	width: 100%;
+	flex-direction: row;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	}
+	.round{
+		margin-left: 0;
+		width:25px;
+		height: 25px;
+		border-radius:100%;
+		margin-left: 15%;
+	}
+	h1,h2{
+		font-size: 20px;
+	}
+	select{
+		font-size: 20px;
+	}
+	#button_left{
+		transform: rotate(90deg);
+	}
+
+	#button_right{
+		transform: rotate(90deg);
+	}
+	.fullscreen-video-wrap video{
+	max-height: 100%;
+	max-width: none;
 	}
 
 }

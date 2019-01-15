@@ -18,29 +18,35 @@
   <header>
   </header>
   <section class="content" >
-    <div class="instructions" id="text1" style="width: 100%;height: 500px; float: left;">
-      <div style="height: 40%;">
-    <h2>Bienvenido!</h2>
-  </div>
-  <div class="text_instructions" style="height: 60%;width: 60%;">
-    <p>Con esta encuesta queremos identificar qué elementos de los espacios públicos te hacen sentir a gusto</p>
-  </div>
-    </div>
-    <div id="text2" class="instructions" style="width: 100%;height: 500px; float: left;">
-    <p>A continuación, te presentaremos dos imágenes y una pregunta</p>
-    </div>
-    <div id="text3" class="instructions" style="width: 100%;height: 500px; float: left;">
-    <p>Tendrás tres opciones...</p>
-    <p>Escoger una de las imágenes</p>
-    </div>
-    <div id="text4" class="instructions" style="width: 100%;height: 500px; float: left;">
-    <p>Tendrás tres opciones...</p>
-    <p>o ninguna en caso que le parezcan similares</p>
-    <p>En caso de detectar un erros, o una imagen que no le permite escoger, por favor oprima el botón "no aplica"</p>
-    </div>
-    <a href="#" id="back">&#8810;</a>
-    <a href="#" id="next">&#8811;</a>
-    <button id="register"><a href="{{ url_for('auth.register') }}">Comenzar</a></button>
+      <div class="instructions" id="text1" style="width: 100%;height: 500px; float: left;">
+            <div class="fullscreen-video-wrap">
+                  <video src="/static/180301_03_B_CausewayBay_02.mp4" autoplay="true" loop="true"></video>
+            </div>
+            <div class="layer-above-video"></div>
+            <div class="text-above-video">
+                  <div style="height: 40%;">
+                        <h2>Bienvenido!</h2>
+                  </div>
+                  <div class="text_instructions" style="height: 60%;width: 60%;">
+                        <p>Con esta encuesta queremos identificar qué elementos de los espacios públicos te hacen sentir a gusto</p>
+                  </div>
+            </div>
+      </div>
+      <div id="text2" class="instructions" style="width: 100%;height: 500px; float: left;">
+            <p>A continuación, te presentaremos dos imágenes y una pregunta</p>
+      </div>
+      <div id="text3" class="instructions" style="width: 100%;height: 500px; float: left;">
+            <p>Tendrás tres opciones...</p>
+            <p>Escoger una de las imágenes</p>
+      </div>
+      <div id="text4" class="instructions" style="width: 100%;height: 500px; float: left;">
+            <p>Tendrás tres opciones...</p>
+            <p>o ninguna en caso que le parezcan similares</p>
+            <p>En caso de detectar un erros, o una imagen que no le permite escoger, por favor oprima el botón "no aplica"</p>
+      </div>
+      <a href="#" id="back">&#8810;</a>
+      <a href="#" id="next">&#8811;</a>
+      <a id="register" href="{{ url_for('auth.register') }}">Comenzar</a>
   </section>
 
   <footer>
@@ -54,7 +60,7 @@
   var count = 1;
   $(document).ready(function(){
     $(".instructions").hide();
-    $("button#register").hide();
+    $("a#register").hide();
     $("a#back").hide();
     $("div#text"+count).show();
 
@@ -68,7 +74,7 @@
       } else {
         $("div#text"+count).show();
         $("a#next").hide();
-        $("button#register").show();
+        $("a#register").show();
       };
       });
 
@@ -82,7 +88,7 @@
       } else if(count <= 3) {
         $("div#text"+count).show();
         $("a#next").show();
-        $("button#register").hide();
+        $("a#register").hide();
       };
   });
      });  
