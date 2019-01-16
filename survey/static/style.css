@@ -19,13 +19,14 @@ header {
 
 h1 { 
 	font-family: sans-serif ;
+	font-size: 50px;
 	color: #363534; 
-	margin: 0.3em 0.5em 0.1em 0.5em; 
+	margin: 0.3em 0.5em 0em 0em; 
 }
 h2 { 
 	font-family: sans-serif ;
 	color: #F3F4F5; 
-	margin: 0.3em 0.5em 0.1em 0.5em;
+	margin: 0.3em 0em 0em 0em;
 	text-align: center;
 	font-size: 30pt;
 }
@@ -41,7 +42,7 @@ h2 {
 	float: left;
 	left: 100px;
 	top:10px;
-	width: 60%;	
+	width: 80%;	
 	text-align: left;
 	color: white;
 	font-size: 20pt;
@@ -81,7 +82,8 @@ nav {
 nav h1 { 
 	color: white;
 	flex: auto; 
-	margin: 0; }
+	margin: 0;
+	font-size: 20px;}
 nav h1 a { 
 	text-decoration: none; 
 	padding: 0.25rem 0.5rem;
@@ -113,11 +115,16 @@ nav ul li a, nav ul li span, header .action {
 }
 .content label { 
 	font-weight: bold; 
+	font-size: 20px;
 	color: #363534;
-	margin-bottom: 0.5em;
-	margin-top: 0.5em;
+	background: none;
+	margin-bottom: 0.2em;
+	margin-top: 2em;
 }
 
+.content > .error{ 
+	margin-top: 0em;
+}
 .content input, .content textarea { 
 	margin-bottom: 0.5em; }
 
@@ -282,9 +289,6 @@ select:hover{
 		height: 25px;
 		border-radius:100%;
 		margin-left: 15%;
-	}
-	h1,h2{
-		font-size: 20px;
 	}
 	select{
 		font-size: 20px;

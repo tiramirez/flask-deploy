@@ -32,17 +32,28 @@
                   </div>
             </div>
       </div>
+
+
       <div id="text2" class="instructions" style="width: 100%;height: 500px; float: left;">
-            <p>A continuación, te presentaremos dos imágenes y una pregunta</p>
+            <p>A continuación, le presentaremos dos imágenes y una pregunta</p>
+            <div style="width: 90%; background: white; float: left;">
+            </div>
+
+
       </div>
+
+
+
       <div id="text3" class="instructions" style="width: 100%;height: 500px; float: left;">
-            <p>Tendrás tres opciones...</br>
-            Escoger una de las imágenes</p>
+            <p>Usted podrá escoger cuál de las dos prefiere,</br>
+              haciendo click sobre la imágen que quiere seleccionar.</p>
       </div>
       <div id="text4" class="instructions" style="width: 100%;height: 500px; float: left;">
-            <p>Tendrás tres opciones...</br>
-            o ninguna en caso que le parezcan similares</br>
-            En caso de detectar un erros, o una imagen que no le permite escoger, por favor oprima el botón "no aplica"</p>
+            <p>En caso de pensar que son muy similares,</br>
+            puede hacer click en el símbolo "=".</p>
+      </div>
+      <div id="text5" class="instructions" style="width: 100%;height: 500px; float: left;">
+            <p>En caso de detectar un erros, o una imagen que no le permite escoger, por favor oprima el botón "no aplica"</p>
       </div>
       <a href="#" id="back">&#8810;</a>
       <a href="#" id="next">&#8811;</a>
@@ -68,7 +79,7 @@
       $(".instructions").hide();
       $("a#back").show();
       count ++;
-      if(count <= 3){
+      if(count <= 4){
         $("div#text"+count).show();
         $("a#next").show();
       } else {
@@ -85,7 +96,7 @@
       if(count == 1){
         $("div#text"+count).show();
         $("a#back").hide();
-      } else if(count <= 3) {
+      } else if(count <= 4) {
         $("div#text"+count).show();
         $("a#next").show();
         $("a#register").hide();
